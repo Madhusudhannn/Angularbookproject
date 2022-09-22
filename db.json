@@ -1,0 +1,34 @@
+{
+  "Users": [
+    {
+      "Username": "Madhu",
+      "age": 25,
+      "id": 1
+    },
+    {
+      "name": "Madhu",
+      "age": "25",
+      "id": 2
+    },
+    {
+      "name": "Madhu",
+      "age": "25",
+      "id": 3
+    },
+    {
+      "name": "Madhu",
+      "age": "25",
+      "id": 4
+    },
+    {
+      "name": "Sudhan",
+      "age": "23",
+      "id": 5
+    },
+    {
+      "name": "Prasad",
+      "age": "25",
+      "id": 6
+    }
+  ]
+}
