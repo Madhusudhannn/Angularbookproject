@@ -5,14 +5,15 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UserService {
-  BASE_URL ="http://localhost:5000/Users"
-
-  createUser(user : {name: String, age: number}){
-
-    return this.http.post(this.BASE_URL,user)
+  createUser(user: { username: string; password: string; }) {
+    return this.http.post(this.BASE_URL+'/signin', user);
   }
-
-
-  constructor(private http:HttpClient) { }
+  signup(user: { username: string; password: string; email: string; }): import("rxjs").Observable<any> {
+    return this.http.post(this.BASE_URL+'/signup', user);
+  }
+  
+  BASE_URL = "http://localhost:8010/api/auth";
+  
+  
+  constructor(private http: HttpClient) { }
 }
-
