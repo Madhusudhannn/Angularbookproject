@@ -1,4 +1,6 @@
-<h3>create Book</h3>
+<h4>updatebook </h4>
+
+bookId:<input type="text"[(ngModel)]="book.bookId" name="bookId"><br>
 author:<input type="text"[(ngModel)]="book.author" name="author"><br>
 title:<input type="text"[(ngModel)]="book.title" name="title"><br>
 publisher:<input type="text"[(ngModel)]="book.publisher" name="publisher"><br>
@@ -10,4 +12,4 @@ content:<input type="text"[(ngModel)]="book.content" name="content"><br>
 
 
 
-<button class= "btn btn-primary" type="button" (click)="saveBook()" > save</button>
+<button class= "btn btn-primary" type="button" (click)="updatebook()" > Update</button>

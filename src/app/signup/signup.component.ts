@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { UserService } from '../user.service';
 
@@ -13,15 +14,15 @@ export class SignupComponent implements OnInit {
     password: "12345",
     email:'madhu@gmail.com'
   }
-  constructor(private userService: UserService) { }
-
-  ngOnInit(): void {
-  }
+  
   signup() {
     const observable: Observable<any> = this.userService.signup(this.user);
     observable.subscribe(
       response =>{//success function
         console.log(response);
+        sessionStorage.setItem('credentials',JSON.stringify(response));
+        this.router.navigate(['signin']);
+
       },
 
       error=>{
@@ -31,4 +32,9 @@ export class SignupComponent implements OnInit {
 
     )
   }
+  constructor(private userService: UserService, private router: Router) { }
+
+  ngOnInit(): void {
+  }
+
 }

@@ -12,6 +12,7 @@ import { Route, RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { BookformComponent } from './bookform/bookform.component';
 import { CreatebookComponent } from './createbook/createbook.component';
+import { UpdatebookComponent } from './updatebook/updatebook.component';
 
 const routes:Route []=[
 
@@ -20,7 +21,8 @@ const routes:Route []=[
   {path:'signin', component:FormsComponent},
 
   {path:'signup', component:SignupComponent},
-  {path:'Bookform', component:BookformComponent}
+  {path:'Bookform', component:BookformComponent},
+  {path: 'updatebook',component:UpdatebookComponent}
 
 ];
 @NgModule({
@@ -31,7 +33,8 @@ const routes:Route []=[
     SearchBookComponent,
     HeaderComponent,
     BookformComponent,
-    CreatebookComponent
+    CreatebookComponent,
+    UpdatebookComponent
   ],
   imports: [
     BrowserModule,

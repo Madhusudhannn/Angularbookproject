@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { BookService } from '../book.service';
 
 @Component({
-  selector: 'app-bookform',
-  templateUrl: './bookform.component.html',
-  styleUrls: ['./bookform.component.css']
+  selector: 'app-updatebook',
+  templateUrl: './updatebook.component.html',
+  styleUrls: ['./updatebook.component.css']
 })
-export class BookformComponent implements OnInit {
+export class UpdatebookComponent implements OnInit {
   book={
+    bookId:"",
     author:"",
     title:"",
     publisher:"",
@@ -17,13 +18,11 @@ export class BookformComponent implements OnInit {
     active:"",
     content:""
   }
-
-
   constructor(private bookService : BookService) { }
 
-  saveBook(){
-    console.log('saved');
-    const observable= this.bookService.saveBook(this.book);
+  updatebook(){
+    console.log('updated');
+    const observable= this.bookService.updatebook(this.book);
     observable.subscribe(response=>{
       console.log(response);
 
