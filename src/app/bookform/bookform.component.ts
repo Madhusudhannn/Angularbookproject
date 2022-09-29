@@ -22,13 +22,45 @@ export class BookformComponent implements OnInit {
   constructor(private bookService : BookService) { }
 
   saveBook(){
+    if(this.book.author=="")
+    {
+      alert("Please enter Author")
+    }
+    else if(this.book.title=="")
+    {
+      alert("Please enter title")
+    }
+    else if(this.book.publisher=="")
+    {
+      alert("Please enter publisher")
+    }
+    else if(this.book.releaseDate=="")
+    {
+      alert("Please enter releaseDate")
+    }
+    else if(this.book.catagory=="")
+    {
+      alert("Please enter Catagory")
+    }
+  
+    else if(this.book.active=="")
+    {
+      alert("Please enter active")
+    }
+    else if(this.book.content=="")
+    {
+      alert("Please enter content")
+    }
+    else{
     console.log('saved');
     const observable= this.bookService.saveBook(this.book);
+    alert("Book created Successfully")
     observable.subscribe(response=>{
       console.log(response);
 
     })
   }
+}
 
   ngOnInit(): void {
   }

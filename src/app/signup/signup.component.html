@@ -1,9 +1,16 @@
-<p>signup form</p>
-username:<input type="text" placeholder="Enter UserName" [(ngModel)] ="user.username" name="userName" class="name"/><br>
-        
-password:<input type="password" placeholder="Enter Password" [(ngModel)] = "user.password" name="password" class="password"/><br>
+<head>
 
-      email:  <input type="email" placeholder="Enter email" [(ngModel)] = "user.email" name="email" class="email"/><br>
+  <link rel="stylesheet" href="signup.component.css" type="text/css">
+
+</head>
+<h3>Signup Page</h3>
+<label>username</label>
+<input type="text" placeholder="Enter UserName" [(ngModel)] ="user.username" name="userName" class="name"/><br>
+<label>password</label>
+       
+<input type="password" placeholder="Enter Password" [(ngModel)] = "user.password" name="password" class="password"/><br>
+<label> email</label>
+      <input type="email" placeholder="Enter email" [(ngModel)] = "user.email" name="email" class="email"/><br>
         <button class='btn btn-primary'(click)="signup()">signup</button>
    
 

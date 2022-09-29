@@ -20,6 +20,10 @@ export class FormsComponent implements OnInit {
     {
       alert("Please enter username")
     }
+    else if(this.user.password=="")
+    {
+      alert("Please enter password")
+    }
     else
     {
     const observable = this.userService.createUser(this.user);

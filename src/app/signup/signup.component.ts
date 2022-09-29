@@ -14,8 +14,26 @@ export class SignupComponent implements OnInit {
     password: "12345",
     email:'madhu@gmail.com'
   }
+  constructor(private userService: UserService, private router: Router) { }
+
+  ngOnInit(): void {
+  }
   
   signup() {
+    if(this.user.username=="")
+    {
+      alert("Please enter username")
+    }
+    else if(this.user.password=="")
+    {
+      alert("Please enter password")
+    }
+    else if(this.user.email=="")
+    {
+      alert("Please enter email")
+    }
+    else
+    {
     const observable: Observable<any> = this.userService.signup(this.user);
     observable.subscribe(
       response =>{//success function
@@ -32,9 +50,7 @@ export class SignupComponent implements OnInit {
 
     )
   }
-  constructor(private userService: UserService, private router: Router) { }
+}
 
-  ngOnInit(): void {
-  }
 
 }
