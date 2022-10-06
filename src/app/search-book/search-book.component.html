@@ -1,1 +1,10 @@
 <p>search-book works!</p>
+<label> catagory</label>
+<input type="text"[(ngModel)]="searchbook.catagory" name="catagory"><br>
+<label> author</label>
+<input type="text"[(ngModel)]="searchbook.author" name="author"><br>
+<label> price</label>
+<input type="text"[(ngModel)]="searchbook.price" name="price"><br>
+<label> publisher</label>
+<input type="text"[(ngModel)]="searchbook.publisher" name="publisher"><br>
+<button class="btn btn-success" type="button" (click)="searchbook" > submit</button>

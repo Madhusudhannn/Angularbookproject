@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BookService } from '../book.service';
 
 @Component({
   selector: 'app-search-book',
@@ -6,8 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-book.component.css']
 })
 export class SearchBookComponent implements OnInit {
+  searchbook={
+    catagory:"",
+    author:"",
+    price:"",
+    publisher:""
 
-  constructor() { }
+  }
+
+  constructor(private bookService : BookService) { }
+  Searchbook(){
+    console.log('allbooks');
+    const observable= this.bookService.byauthor(this.searchbook);
+    observable.subscribe(response=>{
+      console.log(response);
+
+    })
+  }
 
   ngOnInit(): void {
   }

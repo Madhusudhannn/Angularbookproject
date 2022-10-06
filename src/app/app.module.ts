@@ -13,6 +13,8 @@ import { HeaderComponent } from './header/header.component';
 import { BookformComponent } from './bookform/bookform.component';
 import { CreatebookComponent } from './createbook/createbook.component';
 import { UpdatebookComponent } from './updatebook/updatebook.component';
+import { BuybookComponent } from './buybook/buybook.component';
+import { SearchbyAuthorComponent } from './searchby-author/searchby-author.component';
 
 const routes:Route []=[
 
@@ -22,7 +24,10 @@ const routes:Route []=[
 
   {path:'signup', component:SignupComponent},
   {path:'Bookform', component:BookformComponent},
-  {path: 'updatebook',component:UpdatebookComponent}
+  {path: 'updatebook',component:UpdatebookComponent},
+  {path: 'buybook' ,component:BuybookComponent},
+  {path: 'searchbyauthor' ,component:SearchbyAuthorComponent},
+  {path: 'SearchBook', component:SearchBookComponent}
 
 ];
 @NgModule({
@@ -34,7 +39,9 @@ const routes:Route []=[
     HeaderComponent,
     BookformComponent,
     CreatebookComponent,
-    UpdatebookComponent
+    UpdatebookComponent,
+    BuybookComponent,
+    SearchbyAuthorComponent
   ],
   imports: [
     BrowserModule,

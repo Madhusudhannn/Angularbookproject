@@ -1,0 +1,16 @@
+<h2>Buybook </h2>
+
+<label> paymentId</label>
+<input type="text"[(ngModel)]="book.paymentId" name="paymentId"><br>
+<label> readerId</label>
+<input type="text"[(ngModel)]="book.readerId" name="readerId"><br>
+<label> bookID</label>
+<input type="text"[(ngModel)]="book.bookID" name="bookID"><br>
+<label> price</label>
+<input type="text"[(ngModel)]="book.price"  name="price"><br>
+<label> email</label>
+<input type="text"[(ngModel)]="book.email" name="email"><br>
+<label> paymentDate</label>
+<input type="text"[(ngModel)]="book.paymentDate" name="paymentDate"><br>
+
+<button class= "btn btn-primary" type="button" (click)="buyBook()" > Buy</button>

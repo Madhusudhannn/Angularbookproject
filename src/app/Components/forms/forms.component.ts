@@ -13,6 +13,10 @@ export class FormsComponent implements OnInit {
    username: "",
     password:""
   }
+  constructor(private userService: UserService, private router: Router) { }
+
+  ngOnInit(): void {
+  }
   save(){
     // console.log(this.name);
     // console.log(this.age);
@@ -42,9 +46,6 @@ export class FormsComponent implements OnInit {
     
   }
 
-  constructor(private userService: UserService, private router: Router) { }
-
-  ngOnInit(): void {
-  }
+  
 
 }
