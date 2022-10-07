@@ -1,5 +1,8 @@
 <h2>Buybook </h2>
 
+<body>
+    <div class="container">
+      <form>
 <label> paymentId</label>
 <input type="text"[(ngModel)]="book.paymentId" name="paymentId"><br>
 <label> readerId</label>
@@ -14,3 +17,6 @@
 <input type="text"[(ngModel)]="book.paymentDate" name="paymentDate"><br>
 
 <button class= "btn btn-primary" type="button" (click)="buyBook()" > Buy</button>
+</form>
+</div>
+</body>

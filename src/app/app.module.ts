@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsComponent } from './Components/forms/forms.component';
+
 import {HttpClientModule} from '@angular/common/http';
 import { SignupComponent } from './signup/signup.component';
 import { SearchBookComponent } from './search-book/search-book.component'
@@ -15,13 +15,13 @@ import { CreatebookComponent } from './createbook/createbook.component';
 import { UpdatebookComponent } from './updatebook/updatebook.component';
 import { BuybookComponent } from './buybook/buybook.component';
 import { SearchbyAuthorComponent } from './searchby-author/searchby-author.component';
+import { SigninComponent } from './signin/signin.component';
+
 
 const routes:Route []=[
 
   { path:'search', component:SearchBookComponent},
-
-  {path:'signin', component:FormsComponent},
-
+  {path:'signin', component:SigninComponent},
   {path:'signup', component:SignupComponent},
   {path:'Bookform', component:BookformComponent},
   {path: 'updatebook',component:UpdatebookComponent},
@@ -33,7 +33,7 @@ const routes:Route []=[
 @NgModule({
   declarations: [
     AppComponent,
-    FormsComponent,
+   
     SignupComponent,
     SearchBookComponent,
     HeaderComponent,
@@ -41,7 +41,9 @@ const routes:Route []=[
     CreatebookComponent,
     UpdatebookComponent,
     BuybookComponent,
-    SearchbyAuthorComponent
+    SearchbyAuthorComponent,
+    SigninComponent,
+    
   ],
   imports: [
     BrowserModule,

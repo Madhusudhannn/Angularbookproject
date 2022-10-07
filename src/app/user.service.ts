@@ -5,11 +5,15 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UserService {
-  BASE_URL = "http://43.206.125.23:8010/api/auth";
-  createUser(user: { username: string; password: string; }) {
-    return this.http.post(this.BASE_URL+'/signin', user);
+  
+  
+  BASE_URL = "http://localhost:8010/api/auth";
+  signin(user :any){
+
+    return this.http.post(this.BASE_URL+'/signin',user);
+
   }
-  signup(user: { username: string; password: string; email: string; }): import("rxjs").Observable<any> {
+  signup(user: { username: string; password: string; email: string; }) {
     return this.http.post(this.BASE_URL+'/signup', user);
   }
   

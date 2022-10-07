@@ -3,6 +3,10 @@
     <link rel="stylesheet" href="bookform.component.css" type="text/css">
   
   </head>
+  <body>
+    <div class="container">
+      <form>
+  
 <h3>create Book</h3>
 <label>author</label>
 <input type="text"[(ngModel)]="book.author" name="author"><br>
@@ -24,3 +28,6 @@
 
 
 <button class= "btn btn-primary" type="button" (click)="saveBook()" > save</button>
+</form>
+</div>
+</body>

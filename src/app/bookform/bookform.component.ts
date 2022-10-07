@@ -54,7 +54,6 @@ export class BookformComponent implements OnInit {
     else{
     console.log('saved');
     const observable= this.bookService.saveBook(this.book);
-    alert("Book created Successfully")
     observable.subscribe(response=>{
       console.log(response);
 

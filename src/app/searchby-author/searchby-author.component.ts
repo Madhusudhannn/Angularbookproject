@@ -15,6 +15,11 @@ export class SearchbyAuthorComponent implements OnInit {
  constructor(private bookService : BookService) { }
 
   author(){
+    if(this.byauthor.author=="")
+    {
+      alert("Please enter author name")
+    }
+    else{
     console.log('allbooks');
     const observable= this.bookService.byauthor(this.byauthor);
     observable.subscribe(response=>{
@@ -22,6 +27,7 @@ export class SearchbyAuthorComponent implements OnInit {
 
     })
   }
+}
 
 
   ngOnInit(): void {

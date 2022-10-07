@@ -43,7 +43,7 @@ export class BuybookComponent implements OnInit {
     {
       alert("Enter email")
     }
-    else if(this.book.paymentDate)
+    else if(this.book.paymentDate=="")
     {
       alert("Enter paymentDate")
     }
@@ -52,6 +52,7 @@ else{
     const observable= this.bookService.buybook(this.book);
     observable.subscribe(response=>{
       console.log(response);
+      alert("Payment success")
 
     })
   }
