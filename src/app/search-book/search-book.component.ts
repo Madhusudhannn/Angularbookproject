@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { BookService } from '../book.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { BookService } from '../book.service';
   styleUrls: ['./search-book.component.css']
 })
 export class SearchBookComponent implements OnInit {
-  searchbook={
+  searchbook1={
     catagory:"",
     author:"",
     price:"",
@@ -16,13 +17,28 @@ export class SearchBookComponent implements OnInit {
   }
 
   constructor(private bookService : BookService) { }
-  Searchbook(){
-    console.log('allbooks');
-    const observable= this.bookService.byauthor(this.searchbook);
-    observable.subscribe(response=>{
-      console.log(response);
+  searchbook(){
 
-    })
+    const observable: Observable<any>= this.bookService.searchbook(this.searchbook1);
+
+    observable.subscribe(
+
+      responce =>{//success.fuction
+
+        console.log(responce);
+
+
+
+       },
+
+       error=>{
+
+         console.log(error);
+
+       }
+
+    )
+
   }
 
   ngOnInit(): void {

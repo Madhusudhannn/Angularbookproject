@@ -5,8 +5,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class BookService {
-  // Base_URL = 'http://43.206.125.23:8010/api/auth/';
-  Base_URL = 'http://localhost:8010/api/auth/';
+  Base_URL = 'http://43.206.125.23:8010/api/auth/';
+  
   saveBook(book: { author: string; title: string; publisher: string; releaseDate: string; catagory: string; price: number; content: string; }) {
     const credentials = sessionStorage.getItem('credentials');
     const token: any = JSON.parse(credentials||'{}')['accessToken'];
@@ -46,7 +46,10 @@ export class BookService {
   searchbook(book: {catagory:string; author:string; price:string;publisher:string}) {
     const credentials = sessionStorage.getItem('credentials');
     const token: any = JSON.parse(credentials||'{}')['accessToken'];
-    return this.http.get(this.Base_URL+"searchBooks/"+book.catagory+book.author+book.price+book.publisher,  {
+    return this.http.get(this.Base_URL+
+    'searchBooks'+'?catagory='+book.catagory+'&author='+book.author+'&price='+book.price+'&publisher='+book.publisher,
+    
+      {
       headers: {
         Authorization: 'Bearer ' + token
       }

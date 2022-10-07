@@ -27,7 +27,7 @@ const routes:Route []=[
   {path: 'updatebook',component:UpdatebookComponent},
   {path: 'buybook' ,component:BuybookComponent},
   {path: 'searchbyauthor' ,component:SearchbyAuthorComponent},
-  {path: 'SearchBook', component:SearchBookComponent}
+  {path: 'searchbook', component:SearchBookComponent}
 
 ];
 @NgModule({

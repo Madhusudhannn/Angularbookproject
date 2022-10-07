@@ -7,7 +7,8 @@ import { Injectable } from '@angular/core';
 export class UserService {
   
   
-  BASE_URL = "http://localhost:8010/api/auth";
+  
+  BASE_URL = "http://43.206.125.23:8010/api/auth";
   signin(user :any){
 
     return this.http.post(this.BASE_URL+'/signin',user);
